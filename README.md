@@ -107,3 +107,12 @@ W projekcie użyto następujących poleceń GIT:
 
 - `git checkout <ID_COMMITA> -- <plik>` 
   Tymczasowe przywrócenie wcześniejszej wersji pliku z wybranego commita w celu porównania lub odzyskania treści.
+
+
+## 4. Napotkane problemy i sposoby ich rozwiązania
+
+- Różnica między gałęziami main i master
+Nowo utworzone repozytorium na GitHubie posiadało domyślną `gałąź main`, natomiast lokalne repozytorium używało gałęzi `master`.
+Rozwiązanie: pozostałem przy gałęzi `master` jako głównej i przesłałem na nią wszystkie pliki, a następnie w ustawieniach repozytorium zmieniłem domyślną gałąź na `master`.
+
+
