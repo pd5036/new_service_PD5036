@@ -55,67 +55,55 @@ git merge marketing -m "Scalono gałaz marketing z głowna galezia"
 
 W projekcie użyto następujących poleceń GIT:
 
-- **`git init`**  
+- `git init`  
   Utworzenie lokalnego repozytorium GIT w katalogu projektu.
 
-- **`git status`**  
-  Sprawdzanie stanu plików – które są nowe, zmodyfikowane lub już zapisane w commicie.
+- `git status`  
+  Sprawdzanie stanu plików – które są nowe, zmodyfikowane lub już zapisane w commit.
 
-- **`git add`**  
+- `git add`
   Dodawanie nowych lub zmodyfikowanych plików do tzw. staging area przed commitem.  
   Przykłady:
   - `git add opis_usługi.txt plan_wdrożenia.txt` – dodanie pierwszych dokumentów.
-  - `git add .gitignore moje_notatki.txt` – dodanie konfiguracji ignorowania pliku.
-  - `git add images/.gitkeep` oraz później `git add images/logo.png .gitattributes` – dodanie katalogu `images`, pliku .gitkeep i logo.
-  - `git add .` – dodanie wszystkich aktualnie zmodyfikowanych plików.
-
-- **`git commit -m "komentarz"`**  
+    
+- `git commit -m "opis"` 
   Zapisanie zmian w historii repozytorium z krótkim opisem.  
   Używane m.in. po dodaniu:
   - opisu usługi i planu wdrożenia,
   - sekcji „Korzyści dla pacjentów”,
-  - analizy ryzyk,
-  - planu kampanii marketingowej i ankiety dla pacjentów,
-  - plików konfiguracyjnych `.gitignore` i `.gitattributes`,
-  - logo usługi.
+    
 
-- **`git branch`**  
+- `git branch`
   Wyświetlanie istniejących gałęzi oraz tworzenie nowych.  
-  Przykład: `git branch marketing` – utworzenie gałęzi `marketing` na potrzeby prac nad kampanią.
+  Przykład: `git branch marketing` – utworzenie gałęzi `marketing`.
 
-- **`git checkout <gałąź>`**  
+- `git checkout <gałąź>` 
   Przełączanie się między gałęziami.  
   Przykłady:
   - `git checkout marketing` – przejście na gałąź marketing.
   - `git checkout master` – powrót na gałąź główną.
 
-- **`git merge <gałąź>`**  
+- `git merge <gałąź>`
   Scalanie zmian z podanej gałęzi z aktualnie używaną.  
-  W projekcie: `git merge marketing -m "Scalono gałąź marketing z główną gałęzią"` – połączenie zmian z gałęzi `marketing` (kampania i ankieta) z gałęzią `master`.
+  W projekcie: `git merge marketing -m "Scalono gałąź marketing z główną gałęzią"` – połączenie zmian z gałęzi `marketing` z gałęzią `master`.
 
-- **`git tag -a v1.0 -m "opis"`**  
-  Utworzenie oznaczenia wersji (tagu) wskazującego na konkretny commit.  
+- `git tag -a v1.0 -m "opis"`
+  Utworzenie oznaczenia tagu wskazującego na konkretny commit.  
   W projekcie: `v1.0` oznacza gotowy plan wdrożenia usługi medycznej.
 
-- **`git remote add origin <adres>`**  
+- `git remote add origin <adres>`  
   Powiązanie lokalnego repozytorium ze zdalnym repozytorium na GitHubie.  
-  Przykład:  
+  
   `git remote add origin https://github.com/pd5036/new_service_PD5036.git`
 
-- **`git remote set-url origin <adres>`**  
-  Zmiana adresu istniejącego zdalnego repozytorium `origin`, np. po utworzeniu nowego repozytorium na GitHubie.
-
-- **`git push -u origin master`**  
+- `git push -u origin master`  
   Wysłanie commitów z lokalnej gałęzi `master` na GitHub (gałąź `origin/master`) i ustawienie śledzenia tej gałęzi.
 
-- **`git push -u origin master --tags`**  
+- `git push -u origin master --tags`
   Wysłanie commitów oraz wszystkich tagów (np. `v1.0`) do zdalnego repozytorium.
 
-- **`git push -u origin marketing`**  
-  Wypchnięcie gałęzi `marketing` na GitHub, aby była widoczna jako osobna gałąź z dokumentami marketingowymi.
-
-- **`git log` / `git log <plik>`**  
+- `git log` / `git log <plik>`  
   Wyświetlanie historii commitów, np. dla konkretnego pliku (`git log opis_usługi.txt`).
 
-- **`git checkout <ID_COMMITA> -- <plik>`**  
+- `git checkout <ID_COMMITA> -- <plik>` 
   Tymczasowe przywrócenie wcześniejszej wersji pliku z wybranego commita w celu porównania lub odzyskania treści.
